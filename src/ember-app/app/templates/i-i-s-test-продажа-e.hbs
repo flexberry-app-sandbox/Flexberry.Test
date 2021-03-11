@@ -1,0 +1,92 @@
+<h3 class="ui header">{{t "forms.i-i-s-test-продажа-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-test-продажа-e.дата-caption"}}</label>
+    {{
+      flexberry-simpledatetime
+      type="date"
+      placeholder=(t 'components.flexberry-datepicker.placeholder')
+      readonly=readonly
+      value=model.дата
+      class=(if (v-get validationObject "дата" "isInvalid") "error")
+      data-test-i-i-s-test-продажа-e-дата=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "дата" "message")}}
+  </div>
+
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.общаяЦена
+      class=(if (v-get validationObject "общаяЦена" "isInvalid") "error")
+      label=(t "forms.i-i-s-test-продажа-e.общаяЦена-caption")
+      data-test-i-i-s-test-продажа-e-общаяЦена=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "общаяЦена" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-test-продажа-e.покупатель-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.покупатель
+      relationName="покупатель"
+      projection="ПокупательL"
+      title=(t "forms.i-i-s-test-продажа-e.покупатель-caption")
+      readonly=readonly
+      componentName="покупательLookup"
+      class=(if (v-get validationObject "покупатель" "isInvalid") "error")
+      data-test-i-i-s-test-продажа-e-покупатель=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "покупатель" "message")}}
+  </div>
+
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.покупатель.навзвание
+      class=(if (v-get validationObject.покупатель "навзвание" "isInvalid") "error")
+      label=(t "forms.i-i-s-test-продажа-e.покупатель.навзвание-caption")
+      data-test-i-i-s-test-продажа-e-покупатель-навзвание=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject.покупатель "навзвание" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-test-продажа-e.строкаПродажи-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="строкаПродажиGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.строкаПродажи
+      content=model.строкаПродажи
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationObject "строкаПродажи" "isInvalid") "error")
+      data-test-i-i-s-test-продажа-e-строкаПродажи=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "строкаПродажи" "message")}}
+  </div>
+</form>

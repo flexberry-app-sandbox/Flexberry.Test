@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-test-покупатель-e",
+  "editForm": "i-i-s-test-покупатель-e",
+  "external": false,
+  "caption": "Покупатель",
+  "name": "IISTestПокупательL",
+  "className": "ПокупательL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-test-покупатель",
+      "modelProjection": "ПокупательL"
+    }
+  ]
+}

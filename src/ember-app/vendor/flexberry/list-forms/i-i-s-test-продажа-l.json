@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-test-продажа-e",
+  "editForm": "i-i-s-test-продажа-e",
+  "external": false,
+  "caption": "Продажа",
+  "name": "IISTestПродажаL",
+  "className": "ПродажаL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-test-продажа",
+      "modelProjection": "ПродажаL"
+    }
+  ]
+}

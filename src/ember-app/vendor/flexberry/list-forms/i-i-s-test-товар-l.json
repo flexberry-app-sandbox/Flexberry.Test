@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-test-товар-e",
+  "editForm": "i-i-s-test-товар-e",
+  "external": false,
+  "caption": "Товар",
+  "name": "IISTestТоварL",
+  "className": "ТоварL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-test-товар",
+      "modelProjection": "ТоварL"
+    }
+  ]
+}

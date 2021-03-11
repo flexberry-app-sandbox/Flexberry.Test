@@ -1,0 +1,141 @@
+﻿{
+  "name": "IISTestПродажа",
+  "modelName": "i-i-s-test-продажа",
+  "className": "Продажа",
+  "nameSpace": "IIS.Test",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "дата",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "общаяЦена",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "покупатель",
+      "relatedTo": "i-i-s-test-покупатель",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "строкаПродажи",
+      "relatedTo": "i-i-s-test-строка-продажи",
+      "inverse": "продажа"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ПродажаE",
+      "modelName": "i-i-s-test-продажа",
+      "attrs": [
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "общаяЦена",
+          "caption": "Общая цена",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Покупатель",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "навзвание",
+              "caption": "Навзвание",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": 2,
+          "type": "default",
+          "caption": "Покупатель",
+          "name": "покупатель",
+          "relatedTo": "i-i-s-test-покупатель",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "СтрокаПродажиE",
+          "caption": "Строка продажи",
+          "name": "строкаПродажи",
+          "relatedTo": "i-i-s-test-строка-продажи",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ПродажаL",
+      "modelName": "i-i-s-test-продажа",
+      "attrs": [
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "общаяЦена",
+          "caption": "Общая цена",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Покупатель",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "навзвание",
+              "caption": "Навзвание",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Навзвание",
+          "name": "покупатель",
+          "relatedTo": "i-i-s-test-покупатель",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

@@ -1,0 +1,36 @@
+﻿{
+  "applicationCaption": "Test",
+  "applicationTitle": "Test",
+  "items": [
+    {
+      "link": null,
+      "menuName": "test",
+      "caption": "Test",
+      "title": "Test",
+      "children": [
+        {
+          "link": "i-i-s-test-покупатель-l",
+          "menuName": null,
+          "caption": "Покупатель",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-test-продажа-l",
+          "menuName": null,
+          "caption": "Продажа",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-test-товар-l",
+          "menuName": null,
+          "caption": "Товар",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Покупатель",
+  "name": "IISTestПокупательE",
+  "className": "ПокупательE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-test-покупатель",
+      "modelProjection": "ПокупательE"
+    }
+  ]
+}
