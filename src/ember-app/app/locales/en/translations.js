@@ -3,12 +3,15 @@ import EmberFlexberryTranslations from 'ember-flexberry/locales/en/translations'
 
 import IISTestПокупательLForm from './forms/i-i-s-test-покупатель-l';
 import IISTestПродажаLForm from './forms/i-i-s-test-продажа-l';
+import IISTestСкладLForm from './forms/i-i-s-test-склад-l';
 import IISTestТоварLForm from './forms/i-i-s-test-товар-l';
 import IISTestПокупательEForm from './forms/i-i-s-test-покупатель-e';
 import IISTestПродажаEForm from './forms/i-i-s-test-продажа-e';
+import IISTestСкладEForm from './forms/i-i-s-test-склад-e';
 import IISTestТоварEForm from './forms/i-i-s-test-товар-e';
 import IISTestПокупательModel from './models/i-i-s-test-покупатель';
 import IISTestПродажаModel from './models/i-i-s-test-продажа';
+import IISTestСкладModel from './models/i-i-s-test-склад';
 import IISTestСтрокаПродажиModel from './models/i-i-s-test-строка-продажи';
 import IISTestТоварModel from './models/i-i-s-test-товар';
 
@@ -19,6 +22,7 @@ $.extend(true, translations, {
   models: {
     'i-i-s-test-покупатель': IISTestПокупательModel,
     'i-i-s-test-продажа': IISTestПродажаModel,
+    'i-i-s-test-склад': IISTestСкладModel,
     'i-i-s-test-строка-продажи': IISTestСтрокаПродажиModel,
     'i-i-s-test-товар': IISTestТоварModel
   },
@@ -115,9 +119,11 @@ $.extend(true, translations, {
     },
     'i-i-s-test-покупатель-l': IISTestПокупательLForm,
     'i-i-s-test-продажа-l': IISTestПродажаLForm,
+    'i-i-s-test-склад-l': IISTestСкладLForm,
     'i-i-s-test-товар-l': IISTestТоварLForm,
     'i-i-s-test-покупатель-e': IISTestПокупательEForm,
     'i-i-s-test-продажа-e': IISTestПродажаEForm,
+    'i-i-s-test-склад-e': IISTestСкладEForm,
     'i-i-s-test-товар-e': IISTestТоварEForm
   },
 

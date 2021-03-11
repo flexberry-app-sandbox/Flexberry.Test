@@ -38,7 +38,9 @@ namespace IIS.Test
     public class СтрокаПродажи : ICSSoft.STORMNET.DataObject
     {
         
-        private int fКоличество;
+        private int fКолво;
+        
+        private string fЖБС;
         
         private IIS.Test.Товар fТовар;
         
@@ -50,33 +52,65 @@ namespace IIS.Test
 
         
         /// <summary>
-        /// Количество.
+        /// Колво.
         /// </summary>
-        //  *** Start programmer edit section *** (СтрокаПродажи.Количество CustomAttributes)
+        //  *** Start programmer edit section *** (СтрокаПродажи.Колво CustomAttributes)
 
-        //  *** End programmer edit section *** (СтрокаПродажи.Количество CustomAttributes)
-        public virtual int Количество
+        //  *** End programmer edit section *** (СтрокаПродажи.Колво CustomAttributes)
+        public virtual int Колво
         {
             get
             {
-                //  *** Start programmer edit section *** (СтрокаПродажи.Количество Get start)
+                //  *** Start programmer edit section *** (СтрокаПродажи.Колво Get start)
 
-                //  *** End programmer edit section *** (СтрокаПродажи.Количество Get start)
-                int result = this.fКоличество;
-                //  *** Start programmer edit section *** (СтрокаПродажи.Количество Get end)
+                //  *** End programmer edit section *** (СтрокаПродажи.Колво Get start)
+                int result = this.fКолво;
+                //  *** Start programmer edit section *** (СтрокаПродажи.Колво Get end)
 
-                //  *** End programmer edit section *** (СтрокаПродажи.Количество Get end)
+                //  *** End programmer edit section *** (СтрокаПродажи.Колво Get end)
                 return result;
             }
             set
             {
-                //  *** Start programmer edit section *** (СтрокаПродажи.Количество Set start)
+                //  *** Start programmer edit section *** (СтрокаПродажи.Колво Set start)
 
-                //  *** End programmer edit section *** (СтрокаПродажи.Количество Set start)
-                this.fКоличество = value;
-                //  *** Start programmer edit section *** (СтрокаПродажи.Количество Set end)
+                //  *** End programmer edit section *** (СтрокаПродажи.Колво Set start)
+                this.fКолво = value;
+                //  *** Start programmer edit section *** (СтрокаПродажи.Колво Set end)
 
-                //  *** End programmer edit section *** (СтрокаПродажи.Количество Set end)
+                //  *** End programmer edit section *** (СтрокаПродажи.Колво Set end)
+            }
+        }
+        
+        /// <summary>
+        /// ЖБС.
+        /// </summary>
+        //  *** Start programmer edit section *** (СтрокаПродажи.ЖБС CustomAttributes)
+
+        //  *** End programmer edit section *** (СтрокаПродажи.ЖБС CustomAttributes)
+        [StrLen(255)]
+        public virtual string ЖБС
+        {
+            get
+            {
+                //  *** Start programmer edit section *** (СтрокаПродажи.ЖБС Get start)
+
+                //  *** End programmer edit section *** (СтрокаПродажи.ЖБС Get start)
+                string result = this.fЖБС;
+                //  *** Start programmer edit section *** (СтрокаПродажи.ЖБС Get end)
+
+                //  *** End programmer edit section *** (СтрокаПродажи.ЖБС Get end)
+                return result;
+            }
+            set
+            {
+                //  *** Start programmer edit section *** (СтрокаПродажи.ЖБС Set start)
+
+                //  *** End programmer edit section *** (СтрокаПродажи.ЖБС Set start)
+                this.fЖБС = value;
+                //  *** Start programmer edit section *** (СтрокаПродажи.ЖБС Set end)
+
+                //  *** End programmer edit section *** (СтрокаПродажи.ЖБС Set end)
             }
         }
         

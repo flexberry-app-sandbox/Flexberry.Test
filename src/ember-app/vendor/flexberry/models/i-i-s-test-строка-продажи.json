@@ -7,9 +7,18 @@
   "parentClassName": null,
   "attrs": [
     {
-      "name": "количество",
+      "name": "колво",
       "type": "number",
       "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "жБС",
+      "type": "string",
+      "flexberryType": "string",
       "notNull": false,
       "defaultValue": "",
       "stored": true,
@@ -37,37 +46,8 @@
     {
       "name": "СтрокаПродажиE",
       "modelName": "i-i-s-test-строка-продажи",
-      "attrs": [
-        {
-          "name": "количество",
-          "caption": "Количество",
-          "hidden": false,
-          "index": 0
-        }
-      ],
-      "belongsTo": [
-        {
-          "lookupValue": "Название",
-          "lookupValueField": "название",
-          "relationName": "Товар",
-          "belongsTo": [],
-          "hidden": false,
-          "attrs": [
-            {
-              "name": "название",
-              "caption": "Название",
-              "hidden": true,
-              "index": 2
-            }
-          ],
-          "index": 1,
-          "type": "standard",
-          "caption": "Товар",
-          "name": "товар",
-          "relatedTo": "i-i-s-test-товар",
-          "inverse": null
-        }
-      ],
+      "attrs": [],
+      "belongsTo": [],
       "hasMany": []
     }
   ],

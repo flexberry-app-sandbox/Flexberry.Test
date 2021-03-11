@@ -2,6 +2,17 @@
 
 
 
+CREATE TABLE [Склад] (
+
+	 [primaryKey] UNIQUEIDENTIFIER  NOT NULL,
+
+	 [Название] VARCHAR(255)  NULL,
+
+	 [Адрес] VARCHAR(255)  NULL,
+
+	 PRIMARY KEY ([primaryKey]))
+
+
 CREATE TABLE [Покупатель] (
 
 	 [primaryKey] UNIQUEIDENTIFIER  NOT NULL,
@@ -28,7 +39,9 @@ CREATE TABLE [СтрокаПродажи] (
 
 	 [primaryKey] UNIQUEIDENTIFIER  NOT NULL,
 
-	 [Количество] INT  NULL,
+	 [Колво] INT  NULL,
+
+	 [ЖБС] VARCHAR(255)  NULL,
 
 	 [Товар_m0] UNIQUEIDENTIFIER  NOT NULL,
 
@@ -44,6 +57,8 @@ CREATE TABLE [Товар] (
 	 [Название] VARCHAR(255)  NULL,
 
 	 [Цена] FLOAT  NULL,
+
+	 [Склад_m0] UNIQUEIDENTIFIER  NOT NULL,
 
 	 PRIMARY KEY ([primaryKey]))
 
@@ -237,6 +252,9 @@ CREATE INDEX СтрокаПродажи_IТовар_m0 on [СтрокаПрод�
 
  ALTER TABLE [СтрокаПродажи] ADD CONSTRAINT [СтрокаПродажи_FПродажа_0] FOREIGN KEY ([Продажа_m0]) REFERENCES [Продажа]
 CREATE INDEX СтрокаПродажи_IПродажа_m0 on [СтрокаПродажи] ([Продажа_m0])
+
+ ALTER TABLE [Товар] ADD CONSTRAINT [Товар_FСклад_0] FOREIGN KEY ([Склад_m0]) REFERENCES [Склад]
+CREATE INDEX Товар_IСклад_m0 on [Товар] ([Склад_m0])
 
  ALTER TABLE [STORMWEBSEARCH] ADD CONSTRAINT [STORMWEBSEARCH_FSTORMFILTERSETTING_0] FOREIGN KEY ([FilterSetting_m0]) REFERENCES [STORMFILTERSETTING]
 

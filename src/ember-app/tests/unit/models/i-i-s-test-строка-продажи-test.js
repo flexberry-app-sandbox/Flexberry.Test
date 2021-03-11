@@ -5,6 +5,7 @@ moduleForModel('i-i-s-test-строка-продажи', 'Unit | Model | i-i-s-t
   needs: [
     'model:i-i-s-test-покупатель',
     'model:i-i-s-test-продажа',
+    'model:i-i-s-test-склад',
     'model:i-i-s-test-строка-продажи',
     'model:i-i-s-test-товар',
     'validator:ds-error',

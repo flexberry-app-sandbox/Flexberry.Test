@@ -25,7 +25,15 @@
       "ordered": false
     }
   ],
-  "belongsTo": [],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "склад",
+      "relatedTo": "i-i-s-test-склад",
+      "inverse": null
+    }
+  ],
   "hasMany": [],
   "projections": [
     {

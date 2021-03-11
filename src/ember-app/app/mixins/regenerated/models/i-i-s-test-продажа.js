@@ -50,10 +50,7 @@ export let defineProjections = function (modelClass) {
       навзвание: attr('Навзвание', { index: 3 })
     }, { index: 2 }),
     строкаПродажи: hasMany('i-i-s-test-строка-продажи', 'Строка продажи', {
-      количество: attr('Количество', { index: 0 }),
-      товар: belongsTo('i-i-s-test-товар', 'Товар', {
-        название: attr('Название', { index: 2, hidden: true })
-      }, { index: 1, displayMemberPath: 'название' })
+      
     })
   });
 

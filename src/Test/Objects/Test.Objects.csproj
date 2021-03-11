@@ -135,6 +135,9 @@
     </Compile>
     <Compile Include="Properties/AssemblyInfo.cs" />
     <None Include="packages.config" />
+    <Compile Include="Склад.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

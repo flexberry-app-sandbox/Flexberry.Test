@@ -16,6 +16,11 @@ Router.map(function () {
   { path: 'i-i-s-test-продажа-e/:id' });
   this.route('i-i-s-test-продажа-e.new',
   { path: 'i-i-s-test-продажа-e/new' });
+  this.route('i-i-s-test-склад-l');
+  this.route('i-i-s-test-склад-e',
+  { path: 'i-i-s-test-склад-e/:id' });
+  this.route('i-i-s-test-склад-e.new',
+  { path: 'i-i-s-test-склад-e/new' });
   this.route('i-i-s-test-товар-l');
   this.route('i-i-s-test-товар-e',
   { path: 'i-i-s-test-товар-e/:id' });

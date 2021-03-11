@@ -41,6 +41,8 @@ namespace IIS.Test
         
         private double fЦена;
         
+        private IIS.Test.Склад fСклад;
+        
         //  *** Start programmer edit section *** (Товар CustomMembers)
 
         //  *** End programmer edit section *** (Товар CustomMembers)
@@ -106,6 +108,38 @@ namespace IIS.Test
                 //  *** Start programmer edit section *** (Товар.Цена Set end)
 
                 //  *** End programmer edit section *** (Товар.Цена Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Товар.
+        /// </summary>
+        //  *** Start programmer edit section *** (Товар.Склад CustomAttributes)
+
+        //  *** End programmer edit section *** (Товар.Склад CustomAttributes)
+        [NotNull()]
+        public virtual IIS.Test.Склад Склад
+        {
+            get
+            {
+                //  *** Start programmer edit section *** (Товар.Склад Get start)
+
+                //  *** End programmer edit section *** (Товар.Склад Get start)
+                IIS.Test.Склад result = this.fСклад;
+                //  *** Start programmer edit section *** (Товар.Склад Get end)
+
+                //  *** End programmer edit section *** (Товар.Склад Get end)
+                return result;
+            }
+            set
+            {
+                //  *** Start programmer edit section *** (Товар.Склад Set start)
+
+                //  *** End programmer edit section *** (Товар.Склад Set start)
+                this.fСклад = value;
+                //  *** Start programmer edit section *** (Товар.Склад Set end)
+
+                //  *** End programmer edit section *** (Товар.Склад Set end)
             }
         }
         

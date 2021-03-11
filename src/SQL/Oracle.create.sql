@@ -2,6 +2,19 @@
 
 
 
+CREATE TABLE "Склад"
+(
+
+	"primaryKey" RAW(16) NOT NULL,
+
+	"Название" NVARCHAR2(255) NULL,
+
+	"Адрес" NVARCHAR2(255) NULL,
+
+	 PRIMARY KEY ("primaryKey")
+) ;
+
+
 CREATE TABLE "Покупатель"
 (
 
@@ -33,7 +46,9 @@ CREATE TABLE "СтрокаПродажи"
 
 	"primaryKey" RAW(16) NOT NULL,
 
-	"Количество" NUMBER(10) NULL,
+	"Колво" NUMBER(10) NULL,
+
+	"ЖБС" NVARCHAR2(255) NULL,
 
 	"Товар_m0" RAW(16) NOT NULL,
 
@@ -51,6 +66,8 @@ CREATE TABLE "Товар"
 	"Название" NVARCHAR2(255) NULL,
 
 	"Цена" FLOAT(126) NULL,
+
+	"Склад_m0" RAW(16) NOT NULL,
 
 	 PRIMARY KEY ("primaryKey")
 ) ;
@@ -268,6 +285,11 @@ ALTER TABLE "СтрокаПродажи"
 	ADD CONSTRAINT "СтрокаПродаж_3654" FOREIGN KEY ("Продажа_m0") REFERENCES "Продажа" ("primaryKey");
 
 CREATE INDEX "СтрокаПродаж_5412" on "СтрокаПродажи" ("Продажа_m0");
+
+ALTER TABLE "Товар"
+	ADD CONSTRAINT "Товар_FСклад_0" FOREIGN KEY ("Склад_m0") REFERENCES "Склад" ("primaryKey");
+
+CREATE INDEX "Товар_IСклад_m0" on "Товар" ("Склад_m0");
 
 ALTER TABLE "STORMWEBSEARCH"
 	ADD CONSTRAINT "STORMWEBSEARCH_FSTORMFILT_6521" FOREIGN KEY ("FilterSetting_m0") REFERENCES "STORMFILTERSETTING" ("primaryKey");

@@ -3,6 +3,18 @@
 
 
 
+CREATE TABLE Склад (
+
+ primaryKey UUID NOT NULL,
+
+ Название VARCHAR(255) NULL,
+
+ Адрес VARCHAR(255) NULL,
+
+ PRIMARY KEY (primaryKey));
+
+
+
 CREATE TABLE Покупатель (
 
  primaryKey UUID NOT NULL,
@@ -31,7 +43,9 @@ CREATE TABLE СтрокаПродажи (
 
  primaryKey UUID NOT NULL,
 
- Количество INT NULL,
+ Колво INT NULL,
+
+ ЖБС VARCHAR(255) NULL,
 
  Товар_m0 UUID NOT NULL,
 
@@ -48,6 +62,8 @@ CREATE TABLE Товар (
  Название VARCHAR(255) NULL,
 
  Цена DOUBLE PRECISION NULL,
+
+ Склад_m0 UUID NOT NULL,
 
  PRIMARY KEY (primaryKey));
 
@@ -250,6 +266,9 @@ CREATE INDEX Index9c91d9cad7ee75fe65c1fc2e219f7a965ca4257a on СтрокаПро
 
  ALTER TABLE СтрокаПродажи ADD CONSTRAINT FK4b5257dde13a7524c175b186c7f8f20e964d929d FOREIGN KEY (Продажа_m0) REFERENCES Продажа; 
 CREATE INDEX Index4b5257dde13a7524c175b186c7f8f20e964d929d on СтрокаПродажи (Продажа_m0); 
+
+ ALTER TABLE Товар ADD CONSTRAINT FK955b0a6434d99d9c9b3a82980939938693fd247d FOREIGN KEY (Склад_m0) REFERENCES Склад; 
+CREATE INDEX Index955b0a6434d99d9c9b3a82980939938693fd247d on Товар (Склад_m0); 
 
  ALTER TABLE STORMWEBSEARCH ADD CONSTRAINT FKc4378e39870eb056aec84088683297a01d2a6200 FOREIGN KEY (FilterSetting_m0) REFERENCES STORMFILTERSETTING; 
 

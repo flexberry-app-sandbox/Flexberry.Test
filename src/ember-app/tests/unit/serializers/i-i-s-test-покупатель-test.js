@@ -11,6 +11,7 @@ moduleForModel('i-i-s-test-покупатель', 'Unit | Serializer | i-i-s-tes
 
     'model:i-i-s-test-покупатель',
     'model:i-i-s-test-продажа',
+    'model:i-i-s-test-склад',
     'model:i-i-s-test-строка-продажи',
     'model:i-i-s-test-товар',
     'validator:ds-error',
