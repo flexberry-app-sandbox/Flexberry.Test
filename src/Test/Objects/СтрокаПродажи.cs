@@ -30,7 +30,7 @@ namespace IIS.Test
     [Caption("Строка продажи")]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
     [View("СтрокаПродажиE", new string[] {
-            "Количество as \'Количество\'",
+            "Колво",
             "Товар as \'Товар\'",
             "Товар.Название as \'Название\'"}, Hidden=new string[] {
             "Товар.Название"})]

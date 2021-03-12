@@ -16,7 +16,7 @@
       "ordered": false
     },
     {
-      "name": "общаяЦена",
+      "name": "ценуличка",
       "type": "decimal",
       "flexberryType": "double",
       "notNull": false,
@@ -53,8 +53,8 @@
           "index": 0
         },
         {
-          "name": "общаяЦена",
-          "caption": "Общая цена",
+          "name": "ценуличка",
+          "caption": "",
           "hidden": false,
           "index": 1
         }
@@ -103,8 +103,8 @@
           "index": 0
         },
         {
-          "name": "общаяЦена",
-          "caption": "Общая цена",
+          "name": "ценуличка",
+          "caption": "",
           "hidden": false,
           "index": 1
         }

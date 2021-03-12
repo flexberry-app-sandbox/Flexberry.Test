@@ -28,7 +28,7 @@ CREATE TABLE [Продажа] (
 
 	 [Дата] DATETIME  NULL,
 
-	 [ОбщаяЦена] FLOAT  NULL,
+	 [Ценуличка] FLOAT  NULL,
 
 	 [Покупатель_m0] UNIQUEIDENTIFIER  NOT NULL,
 

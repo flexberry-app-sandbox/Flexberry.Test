@@ -43,6 +43,9 @@ export let ValidationRules = {
 
 export let defineProjections = function (modelClass) {
   modelClass.defineProjection('СтрокаПродажиE', 'i-i-s-test-строка-продажи', {
-    
+    колво: attr('', { index: 0 }),
+    товар: belongsTo('i-i-s-test-товар', 'Товар', {
+      название: attr('Название', { index: 2, hidden: true })
+    }, { index: 1, displayMemberPath: 'название' })
   });
 };

@@ -31,7 +31,7 @@ CREATE TABLE Продажа (
 
  Дата TIMESTAMP(3) NULL,
 
- ОбщаяЦена DOUBLE PRECISION NULL,
+ Ценуличка DOUBLE PRECISION NULL,
 
  Покупатель_m0 UUID NOT NULL,
 

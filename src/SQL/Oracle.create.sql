@@ -33,7 +33,7 @@ CREATE TABLE "Продажа"
 
 	"Дата" DATE NULL,
 
-	"ОбщаяЦена" FLOAT(126) NULL,
+	"Ценуличка" FLOAT(126) NULL,
 
 	"Покупатель_m0" RAW(16) NOT NULL,
 

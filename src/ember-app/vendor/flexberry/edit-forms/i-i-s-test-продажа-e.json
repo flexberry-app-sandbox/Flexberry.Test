@@ -9,12 +9,12 @@
       "detailModelName": null
     },
     {
-      "master": null,
-      "displayAttributeName": null,
-      "required": false,
+      "master": "товар",
+      "displayAttributeName": "название",
+      "required": true,
       "relationName": "СтрокаПродажи.Товар",
       "projection": "ТоварL",
-      "detailModelName": null
+      "detailModelName": "i-i-s-test-строка-продажи"
     }
   ],
   "external": false,

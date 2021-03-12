@@ -30,21 +30,21 @@ namespace IIS.Test
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
     [View("ПродажаE", new string[] {
             "Дата as \'Дата\'",
-            "ОбщаяЦена as \'Общая цена\'",
+            "Ценуличка",
             "Покупатель as \'Покупатель\'",
             "Покупатель.Навзвание as \'Навзвание\'"})]
     [AssociatedDetailViewAttribute("ПродажаE", "СтрокаПродажи", "СтрокаПродажиE", true, "", "Строка продажи", true, new string[] {
             ""})]
     [View("ПродажаL", new string[] {
             "Дата as \'Дата\'",
-            "ОбщаяЦена as \'Общая цена\'",
+            "Ценуличка",
             "Покупатель.Навзвание as \'Навзвание\'"})]
     public class Продажа : ICSSoft.STORMNET.DataObject
     {
         
         private System.DateTime fДата;
         
-        private double fОбщаяЦена;
+        private double fЦенуличка;
         
         private IIS.Test.Покупатель fПокупатель;
         
@@ -87,33 +87,33 @@ namespace IIS.Test
         }
         
         /// <summary>
-        /// ОбщаяЦена.
+        /// Ценуличка.
         /// </summary>
-        //  *** Start programmer edit section *** (Продажа.ОбщаяЦена CustomAttributes)
+        //  *** Start programmer edit section *** (Продажа.Ценуличка CustomAttributes)
 
-        //  *** End programmer edit section *** (Продажа.ОбщаяЦена CustomAttributes)
-        public virtual double ОбщаяЦена
+        //  *** End programmer edit section *** (Продажа.Ценуличка CustomAttributes)
+        public virtual double Ценуличка
         {
             get
             {
-                //  *** Start programmer edit section *** (Продажа.ОбщаяЦена Get start)
+                //  *** Start programmer edit section *** (Продажа.Ценуличка Get start)
 
-                //  *** End programmer edit section *** (Продажа.ОбщаяЦена Get start)
-                double result = this.fОбщаяЦена;
-                //  *** Start programmer edit section *** (Продажа.ОбщаяЦена Get end)
+                //  *** End programmer edit section *** (Продажа.Ценуличка Get start)
+                double result = this.fЦенуличка;
+                //  *** Start programmer edit section *** (Продажа.Ценуличка Get end)
 
-                //  *** End programmer edit section *** (Продажа.ОбщаяЦена Get end)
+                //  *** End programmer edit section *** (Продажа.Ценуличка Get end)
                 return result;
             }
             set
             {
-                //  *** Start programmer edit section *** (Продажа.ОбщаяЦена Set start)
+                //  *** Start programmer edit section *** (Продажа.Ценуличка Set start)
 
-                //  *** End programmer edit section *** (Продажа.ОбщаяЦена Set start)
-                this.fОбщаяЦена = value;
-                //  *** Start programmer edit section *** (Продажа.ОбщаяЦена Set end)
+                //  *** End programmer edit section *** (Продажа.Ценуличка Set start)
+                this.fЦенуличка = value;
+                //  *** Start programmer edit section *** (Продажа.Ценуличка Set end)
 
-                //  *** End programmer edit section *** (Продажа.ОбщаяЦена Set end)
+                //  *** End programmer edit section *** (Продажа.Ценуличка Set end)
             }
         }
         
